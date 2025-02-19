@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/distanceStyle.css">
+    <title>Calculator Tools</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <a href="index.html">
+                    <img src="Images/Logo.png" alt="CalcHUB">
+                </a>
+                <ul>
+                    <li><a href="bmi.html" id="bmi-li">BMI Calculator</a></li>
+                    <li><a href="emi.html" id="emi-li">EMI Calculator</a></li>
+                    <li><a href="binary.html" id="bin-li">Binary Calculator</a></li>
+                    <li><a href="hex.html" id="hex-li">Hex Calculator</a></li>
+                    <li><a href="index.html#categories-wt" id="ct-li">Categories</a></li>
+                </ul>
+            </div>
+            <div class="form_btn">
+                <a href="login.html" class="login">Log in</a>
+                <a href="signup.html" class="signup">Sign up</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="pattern-bg"></div>
+    <div class="main">
+        <div class="home-title">
+            <h1 class="home-title_title">Length Converter</h1>
+            <h2 class="home-title_subtitle">Convert Speed</h2>
+        </div>
+    </div>
+
+    <div class="bin-box">
+        <div class="binary_box" id="binary_box">
+            <div class="binary_container" id="distance_container">
+                <div class="from-speed">
+                    <input type="number" name="first-operand" id="length_input">
+                    <select name="operator" id="from_unit">
+                        <option value="km">kilometer</option>
+                        <option value="mm">millimeter</option>
+                        <option value="cm">centimeter</option>
+                        <option value="m">meter</option>
+                        <option value="mi">mile</option>
+                        <option value="ft">foot</option>
+                        <option value="in">inch</option>
+                        <option value="yd">yard</option>
+                    </select>
+                </div>
+                <div class="to-speed">
+                    <input type="number" name="second-operand" id="result-con" readonly>
+                    <select name="operator" id="to_unit">
+                        <option value="mi">mile</option>
+                        <option value="mm">millimeter</option>
+                        <option value="cm">centimeter</option>
+                        <option value="m">meter</option>
+                        <option value="km">kiloMeter</option>
+                        <option value="ft">foot</option>
+                        <option value="in">inch</option>
+                        <option value="yd">yard</option>
+                    </select>
+                </div>
+                <button onclick="convertLength();" type="submit" class="binary_btn">Convert</button>
+            </div>
+        </div>
+    </div>
+
+   
+      
+    <div class="footer_main_ct">
+        <div class="footer_container">
+            <div class="footer_main">
+                <div class="cols">
+                    <div class="footer_main_title" id="appName">CalcHUB</div>
+                    <ul class="footer_main_nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#categories-wt">Categories</a></li>
+                        <li><a href="index.html">Features</a></li>
+                        <li><a href="index.html">Tools</a></li>
+                    </ul>
+                </div>
+
+                <div class="cols">
+                    <div id="cc" class="footer_main_title">Calculators and Conveters</div>
+                    <div class="all_cols">
+                        <div class="cols_1">
+                            <ul class="footer_main_nav_calc">
+                                <li><a href="binaryToDecimal.html">Binary Convert</a></li>
+                                <li><a href="hexToDecimal.html">Hexadeciaml Convert</a></li>
+                                <li><a href="speed.html">Speed Converter</a></li>
+                                <li><a href="distance.html">Distance Conveter</a></li>
+                                <li><a href="area.html">Area Converter</a></li>
+                                <li><a href="temperature.html">Temperature Converter</a></li>
+                            </ul>
+                        </div>
+                        <div class="cols_2">
+                            <ul class="footer_main_nav_calc">
+                                <li><a href="Retirement.html">Retirement Saving</a></li>
+                                <li><a href="emi.html">EMI</a></li>
+                                <li><a href="vat.html">VAT</a></li>
+                                <li><a href="bmi.html">BMI</a></li>
+                            </ul>
+                        </div>
+                        <div class="cols_3">
+                            <ul class="footer_main_nav_calc">
+                                <li><a href="binary.html">Binary</a></li>
+                                <li><a href="hex.html">Hexadeciaml</a></li>
+                                <li><a href="ageCalculator.html">Age Calculator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cols">
+                    <div class="footer_main_title">Categories</div>
+                    <ul class="footer_main_nav">
+                        <li><a href="index.html#categories-wt">Number Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Financial Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Business Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Date & Time Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Conveters</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="row">
+                <div class="footer_info">
+                    <div class="slogan">
+                        <p>&copy; CalcHUB 2024 </p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/sikumLimbu2" class="fa fa-facebook" target="_blank"
+                            alt="Facebook"></a>
+                        <a href="https://sikum.com.np/" class="fa fa-globe" target="_blank" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/sikum_limbu__" class="fa fa-instagram" target="_blank"
+                            alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/sikum-limbu-7b397125a" class="fa fa-linkedin"
+                            target="_blank" alt="Facebook"></a>
+                        <a href="https://github.com/SikumLibang" class="fa fa-github" target="_blank"
+                            alt="Facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Js/distance.js"></script>
+</body>
+
+</html>

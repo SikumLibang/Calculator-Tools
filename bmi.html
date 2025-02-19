@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Calculator Tools</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <a href="index.html">
+                    <img src="Images/Logo.png" alt="CalcHUB">
+                </a>
+                <ul>
+                    <li><a href="bmi.html" id="bmi-li">BMI Calculator</a></li>
+                    <li><a href="emi.html" id="emi-li">EMI Calculator</a></li>
+                    <li><a href="binary.html" id="bin-li">Binary Calculator</a></li>
+                    <li><a href="hex.html" id="hex-li">Hex Calculator</a></li>
+                    <li><a href="index.html#categories-wt" id="ct-li">Categories</a></li>
+                </ul>
+            </div>
+            <div class="form_btn">
+                <a href="login.html" class="login">Log in</a>
+                <a href="signup.html" class="signup">Sign up</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="pattern-bg"></div>
+    <div class="main">
+        <div class="home-title">
+            <h1 class="home-title_title">BMI Calculator</h1>
+            <h2 class="home-title_subtitle">Health is wealth</h2>
+        </div>
+    </div>
+
+    <div class="bim-box-ct">
+        <div class="bmi_container">
+            <div class="bmi_box">
+                <div class="bmi_calculate">
+                    <div class="img_name">
+                        <div class="male">
+                            <img src="Images/male.png" alt="male">
+                            <h4 onclick="clearForm();">Male</h4>
+                        </div>
+                        <div class="female">
+                            <img src="Images/female.webp" alt="male">
+                            <h4 onclick="clearForm();">Female</h4>
+                        </div>
+                    </div>
+                    <div class="bim_input">
+                        <form id="bmi_form">
+                            <div class="age">
+                                <h4>Age</h4>
+                                <input type="number" id="age" class="bmi_in">
+                            </div>
+                            <div class="weight">
+                                <h4>Weight</h4>
+                                <input type="number" id="weight" class="bmi_in">
+                                <p class="unit-bmi">KG</p>
+                            </div>
+                            <div class="height">
+                                <h4>Height</h4>
+                                <input type="number" id="height" class="bmi_in">
+                                <p class="unit-bmi">CM</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit" onclick="calculateBMI();" id="bmi-btn">Calculate your BMI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bmi_box">
+                <div class="bmi_calculate">
+                    <div class="bmi-result-title">
+                        <h2>Body Mass Index</h2>
+                        <div class="output">
+                            <h3 id="bmi-ans">0</h3>
+                        </div>
+                        <h4 id="result-txt">Body Mass Index</h4>
+                    </div>
+
+                    <div class="bim-table-container">
+                        <div class="bmi-table">
+                            <div class="bmi-age-out" id="input-out">
+                                <h4>Age</h4>
+                                <p id="out-age">0</p>
+                            </div>
+                            <div class="bmi-weight-out" id="input-out">
+                                <h4>Weight</h4>
+                                <p><span id="out-wei">0</span> Kg</p>
+                            </div>
+                            <div class="bmi-weight-out" id="input-out">
+                                <h4>Height</h4>
+                                <p><span id="out-hei">0</span> Cm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bmi-description">
+                        <div class="bmi-content">
+                            <div class="bmi-description-row" id="underweight-wt">
+                                <div class="bullet" id="underweight"></div>
+                                <div id="bmi-label-unit" class="underweight">
+                                    <div class="bmi-lable">
+                                        <p>Underweight</p>
+                                    </div>
+                                    <div class="bmi-range">
+                                        <p><span class="bmi-wt-rang">Below 18.5</span> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bmi-description-row" id="normal-wt">
+                                <div class="bullet" id="normal"></div>
+                                <div id="bmi-label-unit" class="normal">
+                                    <div class="bmi-lable">
+                                        <p>Normal</p>
+                                    </div>
+                                    <div class="bmi-range">
+                                        <p><span class="bmi-wt-rang"> 18.5 - 24.9</span> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bmi-description-row" id="overweight-wt">
+                                <div class="bullet" id="overweight"></div>
+                                <div id="bmi-label-unit" class="overweight">
+                                    <div class="bmi-lable">
+                                        <p>Overweight</p>
+                                    </div>
+                                    <div class="bmi-range">
+                                        <p><span class="bmi-wt-rang"> 25.0 - 29.9</span> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bmi-description-row" id="obese-wt">
+                                <div class="bullet" id="obese"></div>
+                                <div id="bmi-label-unit" class="obese">
+                                    <div class="bmi-lable">
+                                        <p>Obese</p>
+                                    </div>
+                                    <div class="bmi-range">
+                                        <p><span class="bmi-wt-rang">30.0 Above</span> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+     
+    <div class="footer_main_ct">
+        <div class="footer_container">
+            <div class="footer_main">
+                <div class="cols">
+                    <div class="footer_main_title" id="appName">CalcHUB</div>
+                    <ul class="footer_main_nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#categories-wt">Categories</a></li>
+                        <li><a href="index.html">Features</a></li>
+                        <li><a href="index.html">Tools</a></li>
+                    </ul>
+                </div>
+
+                <div class="cols">
+                    <div id="cc" class="footer_main_title">Calculators and Conveters</div>
+                    <div class="all_cols">
+                        <div class="cols_1">
+                            <ul class="footer_main_nav_calc">
+                                <li><a href="binaryToDecimal.html">Binary Convert</a></li>
+                                <li><a href="hexToDecimal.html">Hexadeciaml Convert</a></li>
+                                <li><a href="speed.html">Speed Converter</a></li>
+                                <li><a href="distance.html">Distance Conveter</a></li>
+                                <li><a href="area.html">Area Converter</a></li>
+                                <li><a href="temperature.html">Temperature Converter</a></li>
+                            </ul>
+                        </div>
+                        <div class="cols_2">
+                            <ul class="footer_main_nav_calc">
+                                <li><a href="Retirement.html">Retirement Saving</a></li>
+                                <li><a href="emi.html">EMI</a></li>
+                                <li><a href="vat.html">VAT</a></li>
+                                <li><a href="bmi.html">BMI</a></li>
+                            </ul>
+                        </div>
+                        <div class="cols_3">
+                            <ul class="footer_main_nav_calc">
+                                <li><a href="binary.html">Binary</a></li>
+                                <li><a href="hex.html">Hexadeciaml</a></li>
+                                <li><a href="ageCalculator.html">Age Calculator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cols">
+                    <div class="footer_main_title">Categories</div>
+                    <ul class="footer_main_nav">
+                        <li><a href="index.html#categories-wt">Number Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Financial Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Business Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Date & Time Calculator</a></li>
+                        <li><a href="index.html#categories-wt">Conveters</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="row">
+                <div class="footer_info">
+                    <div class="slogan">
+                        <p>&copy; CalcHUB 2024 </p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/sikumLimbu2" class="fa fa-facebook" target="_blank"
+                            alt="Facebook"></a>
+                        <a href="https://sikum.com.np/" class="fa fa-globe" target="_blank" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/sikum_limbu__" class="fa fa-instagram" target="_blank"
+                            alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/sikum-limbu-7b397125a" class="fa fa-linkedin"
+                            target="_blank" alt="Facebook"></a>
+                        <a href="https://github.com/SikumLibang" class="fa fa-github" target="_blank"
+                            alt="Facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="Js/js.js"></script> -->
+    <script src="Js/bmiJs.js"></script>
+</body>
+
+</html>
